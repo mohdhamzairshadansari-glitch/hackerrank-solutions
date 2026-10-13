@@ -7,6 +7,12 @@
 -- Language    db2
 -- Status      Accepted
 -- Submitted   2026-10-13, 09:52 p.m.
+-- Technique   select-all-wildcard
+-- Time        O(N)
+-- Space       O(N)
+-- Insight     The query retrieves every column and row from the specified table by utilizing the wildcard operator.
+-- Interview   Before: "How do I fetch all data from a table?" After: "Use the SELECT * syntax to retrieve all columns for every row, which results in O(N) time complexity where N is the number of rows in the table."
+-- Pitfalls    (1) Using the wildcard operator in production environments can lead to performance degradation when tables contain many columns or large data types.  (2) Selecting all columns may inadvertently expose sensitive data that is not required for the specific application logic.
 -- ──────────────────────────────────────────────────
 
 
